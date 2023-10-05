@@ -5,8 +5,9 @@ using UnityEngine;
 public class ResetBall : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject prefabBall;
-    public Transform ballSpawn;
+    private float amountOfThrows =0f ;
+   // public GameObject prefabBall;
+    //public Transform ballSpawn;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class ResetBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log (amountOfThrows);
     }
 
     public void OnTriggerEnter(Collider other)
@@ -24,6 +25,7 @@ public class ResetBall : MonoBehaviour
         if (other.gameObject.name == "BallCheck")
         {
             this.transform.position = new Vector3(20.8f, 0.27f, 4.87f);
+            amountOfThrows = amountOfThrows + 1;
         }
 
         //prefabBall.transform.position = new Vector3(ballSpawn.position.y, ballSpawn.position.x, ballSpawn.position.z);
