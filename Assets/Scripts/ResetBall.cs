@@ -21,9 +21,14 @@ public class ResetBall : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-                
-        Destroy(other.gameObject);
-        Instantiate(prefabBall, ballSpawn.position, ballSpawn.rotation);
+        if (other.gameObject.name == "BallCheck")
+        {
+            this.transform.position = new Vector3(20.8f, 0.27f, 4.87f);
+        }
+
+        //prefabBall.transform.position = new Vector3(ballSpawn.position.y, ballSpawn.position.x, ballSpawn.position.z);
+        // Destroy(other.gameObject);
+        //  Instantiate(prefabBall, ballSpawn.position, ballSpawn.rotation);
     }
 
 }
