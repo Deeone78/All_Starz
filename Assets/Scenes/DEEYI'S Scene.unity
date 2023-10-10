@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11458053, g: 0.33012125, b: 0.71203196, a: 1}
+  m_IndirectSpecularColor: {r: 0.1145805, g: 0.3301212, b: 0.71203196, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1640,7 +1640,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -8811388872089202044, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_TranslateAnchorAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Translate Anchor
       m_Type: 0
@@ -2433,7 +2433,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -440298646266941818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_TranslateAnchorAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Translate Anchor
       m_Type: 0
@@ -2978,7 +2978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1151596521}
   m_Layer: 0
-  m_Name: GameObjectVR STUFF
+  m_Name: VR STUFF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4871,6 +4871,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5707600443139551428, guid: f1ce72fc681da834aac86c924c3d403b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0156e9fdbcbaf53479b44a28c8d8390b, type: 2}
     - target: {fileID: 5707600443139551429, guid: f1ce72fc681da834aac86c924c3d403b, type: 3}
       propertyPath: m_Material
       value: 
