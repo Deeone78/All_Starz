@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.080425695, g: 0.09982307, b: 0.30123925, a: 1}
+  m_IndirectSpecularColor: {r: 0.08037187, g: 0.09977028, b: 0.30118072, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -308,8 +308,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117507801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 97}
-  m_LocalScale: {x: 458.28476, y: 188.69998, z: 188.69998}
+  m_LocalPosition: {x: 0, y: 0, z: 99.99998}
+  m_LocalScale: {x: 408.54535, y: 183.93407, z: 188.69998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299148709}
@@ -317,7 +317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 8.999939}
+  m_AnchoredPosition: {x: -2, y: -1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &117507803
@@ -899,7 +899,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5019608, g: 0.22745098, b: 0.62352943, a: 1}
+    m_NormalColor: {r: 0.5019608, g: 0.22745098, b: 0.62352943, a: 0.68235296}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1285,7 +1285,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.50048065, g: 0.22614807, b: 0.6226415, a: 1}
+    m_NormalColor: {r: 0.50048065, g: 0.22614807, b: 0.6226415, a: 0.68235296}
     m_HighlightedColor: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.7924528, g: 0.7851384, b: 0.22801706, a: 1}
@@ -1467,7 +1467,7 @@ RectTransform:
   m_GameObject: {fileID: 460950036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 99.99998}
-  m_LocalScale: {x: 914.06274, y: 188.69998, z: 188.69998}
+  m_LocalScale: {x: 890.4068, y: 179.69522, z: 188.69998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1517863460}
@@ -2082,7 +2082,7 @@ RectTransform:
   m_GameObject: {fileID: 707460307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 99.99998}
-  m_LocalScale: {x: 417.4195, y: 222.85466, z: 188.69997}
+  m_LocalScale: {x: 401.46573, y: 184.13148, z: 188.69997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1101969935}
@@ -3011,7 +3011,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5019608, g: 0.22745098, b: 0.62352943, a: 0.44705883}
+    m_NormalColor: {r: 0.5019608, g: 0.22745098, b: 0.62352943, a: 0.68235296}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4048,7 +4048,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5019608, g: 0.22745098, b: 0.62352943, a: 1}
+    m_NormalColor: {r: 0.5019608, g: 0.22745098, b: 0.62352943, a: 0.68235296}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9622642, g: 0.9519211, b: 0.17702031, a: 1}
@@ -4201,7 +4201,7 @@ RectTransform:
   m_GameObject: {fileID: 1658224320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 914.06274, y: 188.7, z: 188.7}
+  m_LocalScale: {x: 890.05035, y: 181.44072, z: 188.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 448256128}
