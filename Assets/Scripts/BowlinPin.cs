@@ -7,8 +7,8 @@ public class BowlinPin : MonoBehaviour
 {
     
     // Start is called before the first frame update
-    public static int score;
-    int totalScore = 10;
+    public static int score = 0;
+    public static int totalScore = 10;
     UIManger UI_Manager;
 
     void Start()
@@ -27,10 +27,11 @@ public class BowlinPin : MonoBehaviour
      
     }
 
-    void AddScore(int amount)
+    public static void AddScore(int amount)
     {
         score += amount;
-        UI_Manager.UpdateUI(score, totalScore);
+        // UI_Manager.UpdateUI(score, totalScore);
+        UIManger.instance.UpdateUI(score, totalScore);
     }
     
     
