@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ResetBall : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float amountOfThrows =0f ;
+    public static int amountOfThrows =0 ;
    // public GameObject prefabBall;
     public Vector3 ballSpawn;
+    public TMP_Text throwAmount;
 
     void Start()
     {
@@ -17,7 +21,8 @@ public class ResetBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log (amountOfThrows);
+       // Debug.Log (amountOfThrows);
+      //  throwAmount = amountOfThrows;
     }
 
     public void OnTriggerEnter(Collider other)
