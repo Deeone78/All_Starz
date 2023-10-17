@@ -10,6 +10,7 @@ public class UI_Shop : MonoBehaviour
 {
     public Transform container;
     private Transform shopItemTemplate;
+    public Button Item;
     private void Awake()
     {
         container = transform.Find("container");
@@ -17,15 +18,28 @@ public class UI_Shop : MonoBehaviour
         shopItemTemplate.gameObject.SetActive(false);
     }
 
-    private void CreateItemButton(Sprite itemSprite , string itemnName, int itemCost, int positionIndex)
+    private void Start()
+    {
+        foreach (ItemData x in FindObjectsOfType<ItemData>())
+        {
+            CreateItemButton(x.sprite, x.name,x.cost,x.index);
+        }
+    }
+    private void CreateItemButton(Sprite itemSprite , string itemName, int itemCost, int positionIndex)
     {
         Transform shopItemTransform = Instantiate(shopItemTemplate, container);
         RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
         float shopItemHeight = 30f;
         shopItemRectTransform.anchoredPosition = new Vector2(0, -shopItemHeight * positionIndex );
-        shopItemTransform.Find("itemName").GetComponent<TextMeshProuUGUI>().SetText(itemName);
-        shopItemTransform.Find("costText").GetComponent<TextMeshProuUGUI>().SetText(itemCost.ToString());
+        shopItemTransform.Find("itemName").GetComponent<TextMeshProUGUI>().SetText(itemName);
+        shopItemTransform.Find("costText").GetComponent<TextMeshProUGUI>().SetText(itemCost.ToString());
+
+        shopItemTransform.Find("itemImage").GetComponent<Image>().sprite = itemSprite;
+
     }
 
+    public void Purchase(int cost)
+    {
 
+    }
 }
