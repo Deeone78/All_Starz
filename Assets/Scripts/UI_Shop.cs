@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
@@ -22,10 +23,14 @@ public class UI_Shop : MonoBehaviour
     {
         foreach (ItemData x in FindObjectsOfType<ItemData>())
         {
+            /*if (x.cost > money)
+            {
+                x.GetComponent<Button>().interactable = false;
+            }*/
             CreateItemButton(x.sprite, x.name,x.cost,x.index);
         }
     }
-    private void CreateItemButton(Sprite itemSprite , string itemName, int itemCost, int positionIndex)
+    private void CreateItemButton(  Sprite itemSprite , string itemName, int itemCost, int positionIndex)
     {
         Transform shopItemTransform = Instantiate(shopItemTemplate, container);
         RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
@@ -36,10 +41,26 @@ public class UI_Shop : MonoBehaviour
 
         shopItemTransform.Find("itemImage").GetComponent<Image>().sprite = itemSprite;
 
+        shopItemTransform.GetComponent<Button>().onClick.AddListener(delegate {Purchase(itemCost);});
+
     }
 
-    public void Purchase(int cost)
+    public void Purchase(int price)
     {
 
     }
+
+    /* button, onClick  ->  Puchase() 
+     *  money - cost
+     *  
+     *  in Start()
+     *  if (x.cost > money)
+        {
+                x.GetComponent<Button>().interactable = false;
+     *  }
+     *  
+     *  static money;
+     *  
+     *  money += score;
+     */
 }
