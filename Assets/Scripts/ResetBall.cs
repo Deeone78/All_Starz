@@ -16,7 +16,7 @@ public class ResetBall : MonoBehaviour
     void Start()
     {
         
-        Vector3 ballspawn = ballpos.transform.position;
+        ballSpawn = ballpos.transform.position;
     }
 
     // Update is called once per frame
