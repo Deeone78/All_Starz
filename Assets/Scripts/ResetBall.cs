@@ -9,13 +9,14 @@ public class ResetBall : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int amountOfThrows =0 ;
-   // public GameObject prefabBall;
-    public Vector3 ballSpawn;
+    public GameObject ballpos;
+    Vector3 ballSpawn;
     public TMP_Text throwAmount;
 
     void Start()
     {
         
+        Vector3 ballspawn = ballpos.transform.position;
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class ResetBall : MonoBehaviour
         if (other.gameObject.name == "BallCheck")
         {
             //this.transform.position = new Vector3(20.8f, 0.27f, 4.87f);
-            transform.position = ballSpawn;
+            this.transform.position = ballSpawn;
             amountOfThrows = amountOfThrows + 1;
         }
 
