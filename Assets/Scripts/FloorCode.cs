@@ -6,6 +6,7 @@ public class FloorCode : MonoBehaviour
 {
     bool knockedOver;
     ResetBall resetBall;
+    public GameObject pinCheck;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,16 +23,26 @@ public class FloorCode : MonoBehaviour
     {
         if (ResetBall.amountOfThrows == 1)
         {
+            
+            
+            if (knockedOver == true)
+            {
+                pinCheck.SetActive(false);
 
+            }
 
         }
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "BowlingAlly") 
+        if (other.gameObject.tag == "BowlingAlly" && knockedOver == false) 
         {
             knockedOver = true; 
             UIManger.AddScore(1);
+            
+
         }
+        
+        
     }
 }
