@@ -31,6 +31,13 @@ public class PinRespawn : MonoBehaviour
         
         
        }
+
+        if (ResetBall.amountOfThrows == 2)
+        {
+            this.transform.position = startPos;
+
+
+        }
     }
 
 

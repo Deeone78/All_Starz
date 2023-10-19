@@ -22,16 +22,20 @@ public class FloorCode : MonoBehaviour
     void Update()
     {
         if (ResetBall.amountOfThrows == 1)
-        {
-            
-            
+        {    
             if (knockedOver == true)
             {
                 pinCheck.SetActive(false);
 
             }
+        }
+      /*  if (ResetBall.amountOfThrows == 2)
+        {
+            Debug.Log("Next turn pins respawn");
 
         }
+      */  
+    
     }
     public void OnTriggerEnter(Collider other)
     {
