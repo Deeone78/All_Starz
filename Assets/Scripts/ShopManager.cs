@@ -31,4 +31,15 @@ public class ShopManager : MonoBehaviour
         Shop[currentShopIndex].SetActive(true);
         PlayerPrefs.SetInt("SelectedItem", currentShopIndex);
     }
+
+    public void ChangePrevious()
+    {
+        Shop[currentShopIndex].SetActive(false);
+
+        currentShopIndex--;
+        if (currentShopIndex == -1)
+            currentShopIndex = Shop.Length -1;
+        Shop[currentShopIndex].SetActive(true);
+        PlayerPrefs.SetInt("SelectedItem", currentShopIndex);
+    }
 }
