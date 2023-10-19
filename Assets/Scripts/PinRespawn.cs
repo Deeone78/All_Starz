@@ -26,19 +26,23 @@ public class PinRespawn : MonoBehaviour
     void Update()
     {
        if (ResetBall.amountOfThrows == 1 ) 
-       { 
-        this.transform.position = startPos;
+       {
+            RespawnP();
         
         
        }
 
         if (ResetBall.amountOfThrows == 2)
         {
-            this.transform.position = startPos;
+            RespawnP();
 
 
         }
     }
+    void RespawnP()
+    {
+        this.transform.position = startPos;
 
+    }
 
 }
