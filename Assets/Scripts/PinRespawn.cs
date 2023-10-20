@@ -9,6 +9,7 @@ public class PinRespawn : MonoBehaviour
     FloorCode floorCode;
     // Start is called before the first frame update
     private Vector3 startPos;
+    public GameObject pinCheck1;
 
     void Awake()
     {
@@ -25,18 +26,19 @@ public class PinRespawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (ResetBall.amountOfThrows == 1 ) 
-       {
-            RespawnP();
-        
-        
-       }
+       
 
         if (ResetBall.amountOfThrows == 2)
         {
             RespawnP();
             Debug.Log("Next players turn");
+            pinCheck1.SetActive(true);
             ResetBall.amountOfThrows = 0;
+
+        }
+        if (ResetBall.amountOfThrows == 1)
+        {
+            pinCheck1.SetActive(false);
         }
     }
     void RespawnP()

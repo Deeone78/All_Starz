@@ -22,7 +22,7 @@ public class ResetBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Debug.Log (amountOfThrows);
+        Debug.Log (amountOfThrows);
       //  throwAmount = amountOfThrows;
     }
 

@@ -29,13 +29,15 @@ public class FloorCode : MonoBehaviour
 
             }
         }
-      /*  if (ResetBall.amountOfThrows == 2)
+        /*
+        if (ResetBall.amountOfThrows == 2)
         {
             Debug.Log("Next turn pins respawn");
+            pinCheck.SetActive(true);
 
         }
-      */  
-    
+        
+      */
     }
     public void OnTriggerEnter(Collider other)
     {
