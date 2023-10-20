@@ -12,9 +12,11 @@ public class UIManger : MonoBehaviour
     public GameObject pins;
     public static int score = 0;
     public static int totalScore = 10;
+    ResetBall resetBall;
     void Awake()
     {
         instance = this;
+        resetBall = GetComponent<ResetBall>();
     }
     public static void AddScore(int amount)
     {
@@ -26,8 +28,12 @@ public class UIManger : MonoBehaviour
 
     void Update()
     {
-       
-
+        if (score == 10 && ResetBall.amountOfThrows == 1)
+        {
+            Debug.Log("strike");
+            ResetBall.amountOfThrows +=1;
+        }
+        
     }
 
     // Update is called once per frame

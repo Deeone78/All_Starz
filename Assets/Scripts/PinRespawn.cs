@@ -35,8 +35,8 @@ public class PinRespawn : MonoBehaviour
         if (ResetBall.amountOfThrows == 2)
         {
             RespawnP();
-
-
+            Debug.Log("Next players turn");
+            ResetBall.amountOfThrows = 0;
         }
     }
     void RespawnP()
