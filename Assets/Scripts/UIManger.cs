@@ -32,6 +32,7 @@ public class UIManger : MonoBehaviour
         {
             Debug.Log("strike");
             ResetBall.amountOfThrows +=1;
+
         }
         
     }
