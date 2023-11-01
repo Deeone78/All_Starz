@@ -29,7 +29,7 @@ public class FloorCode : MonoBehaviour
 
             }
         }
-        /*
+        
         if (ResetBall.amountOfThrows == 2)
         {
             Debug.Log("Next turn pins respawn");
@@ -37,7 +37,7 @@ public class FloorCode : MonoBehaviour
 
         }
         
-      */
+      
     }
     public void OnTriggerEnter(Collider other)
     {
