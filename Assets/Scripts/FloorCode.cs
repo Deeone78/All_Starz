@@ -5,6 +5,8 @@ using UnityEngine;
 public class FloorCode : MonoBehaviour
 {
     bool knockedOver;
+    bool player1=true;
+    bool player2=false;
     ResetBall resetBall;
     public GameObject pinCheck;
     // Start is called before the first frame update
@@ -30,13 +32,29 @@ public class FloorCode : MonoBehaviour
             }
         }
         
-        if (ResetBall.amountOfThrows == 2)
+        if (ResetBall.amountOfThrows == 2&& player1 ==true)
         {
-            Debug.Log("Next turn pins respawn");
-            pinCheck.SetActive(true);
+            Debug.Log("Player 2 turn");
+            player1 = false;
+            player2 = true;
+            //pinCheck.SetActive(true);
 
         }
-        
+
+        if (ResetBall.amountOfThrows == 2 && player2 == true)
+        {
+            Debug.Log("Player 1 turn");
+            player2 = false;
+            player1 = true;
+            //pinCheck.SetActive(true);
+
+        }
+
+        if (ResetBall.amountOfThrows == -1)
+        {
+
+            knockedOver = false;
+        }
       
     }
     public void OnTriggerEnter(Collider other)
