@@ -7,6 +7,7 @@ public class FloorCode : MonoBehaviour
     bool knockedOver;
     bool player1=true;
     bool player2=false;
+    
     ResetBall resetBall;
     public GameObject pinCheck;
     // Start is called before the first frame update
