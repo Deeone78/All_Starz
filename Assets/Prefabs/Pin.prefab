@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 972265116766980482}
   - component: {fileID: 972265116766980493}
   - component: {fileID: 6754488333605938721}
-  - component: {fileID: 6320206833731100333}
   - component: {fileID: 1767233896687664130}
   m_Layer: 0
   m_Name: Pin
@@ -177,33 +176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pinPos: {fileID: 972265116766980494}
   pinCheck1: {fileID: 2291229939766723456}
---- !u!54 &6320206833731100333
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972265116766980494}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1767233896687664130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -378,8 +350,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.009931918, y: 0.0005953676, z: 0.012395227}
-  m_Center: {x: 0.0022586668, y: -0.009555094, z: 0.000288801}
+  m_Size: {x: 0.011763461, y: 0.0005953676, z: 0.018068584}
+  m_Center: {x: 0.0020866399, y: -0.009555013, z: 0.0004834367}
 --- !u!136 &8414089984393109065
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -399,7 +371,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.0100000035
-  m_Height: 0.022818916
+  m_Radius: 0.005434882
+  m_Height: 0.025397902
   m_Direction: 1
-  m_Center: {x: -0.000000058026345, y: 0.004325099, z: 0.000000027843713}
+  m_Center: {x: 0.0020925477, y: 0.0030356303, z: -0.00017418514}
