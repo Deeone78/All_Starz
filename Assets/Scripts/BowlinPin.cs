@@ -34,8 +34,8 @@ public class BowlinPin : MonoBehaviour
       
         if (other.gameObject.tag == "HitPath")
         {
-            UIManger.AddScore(1);
-            Debug.Log("UR NO1");
+            //UIManger.AddScore(1);
+           
            // Destroy(gameObject, 1.5f);
         }
         

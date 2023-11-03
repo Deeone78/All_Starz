@@ -37,7 +37,7 @@ public class ActivatePins : MonoBehaviour
             pin7.SetActive(true);
             pin8.SetActive(true);
             pin9.SetActive(true);
-            Debug.Log("parent got there first");
+
           
         }
     }

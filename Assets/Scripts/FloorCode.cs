@@ -5,8 +5,11 @@ using UnityEngine;
 public class FloorCode : MonoBehaviour
 {
     bool knockedOver;
-    bool player1=true;
-    bool player2=false;
+    public bool player1=true;
+    //public bool player2=false;
+    public int p1Score = 0;
+    public int p2Score = 0;
+    private int one = 1;
     
     ResetBall resetBall;
     public GameObject pinCheck;
@@ -33,19 +36,21 @@ public class FloorCode : MonoBehaviour
             }
         }
         
-        if (ResetBall.amountOfThrows == 2&& player1 ==true)
+        
+        
+        if (ResetBall.amountOfThrows == -1&& player1 ==true)
         {
             Debug.Log("Player 2 turn");
             player1 = false;
-            player2 = true;
+            
             //pinCheck.SetActive(true);
 
         }
 
-        if (ResetBall.amountOfThrows == 2 && player2 == true)
+        if (ResetBall.amountOfThrows == -1 && player1 == false)
         {
             Debug.Log("Player 1 turn");
-            player2 = false;
+            
             player1 = true;
             //pinCheck.SetActive(true);
 
@@ -60,12 +65,24 @@ public class FloorCode : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "BowlingAlly" && knockedOver == false) 
+        if (other.gameObject.tag == "BowlingAlly" && knockedOver == false)
         {
-            knockedOver = true; 
+            knockedOver = true;
             UIManger.AddScore(1);
-            
 
+            /*  if (player1 == true)
+              {
+                  one+=p1Score;
+
+
+              }
+              if(player1 == false)
+              {
+
+                  one+=p2Score;
+              }
+
+              */
         }
         
         

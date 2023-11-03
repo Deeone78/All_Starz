@@ -76,7 +76,7 @@ public class PinRespawn : MonoBehaviour
 
         {
             RespawnP();
-            Debug.Log("repostioned");
+         //   Debug.Log("repostioned");
 
 
 
@@ -107,7 +107,7 @@ public class PinRespawn : MonoBehaviour
     IEnumerator PlusOne()
     {
         yield return new WaitForSeconds(1);
-        Debug.Log("Smartest in the world");
+     //   Debug.Log("Smartest in the world");
         refreash = false ; 
         ResetBall.amountOfThrows = 0;
 
