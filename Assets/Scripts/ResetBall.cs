@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
+using TL.Core;
 
 public class ResetBall : MonoBehaviour
 {
@@ -12,10 +13,11 @@ public class ResetBall : MonoBehaviour
     public GameObject ballpos;
     Vector3 ballSpawn;
     public TMP_Text throwAmount;
+  
 
     void Start()
     {
-        
+       
         ballSpawn = ballpos.transform.position;
     }
 
@@ -23,6 +25,8 @@ public class ResetBall : MonoBehaviour
     void Update()
     {
         Debug.Log (amountOfThrows);
+        Debug.Log (MoveController.throwTime);
+       
       //  throwAmount = amountOfThrows;
     }
 
@@ -31,8 +35,13 @@ public class ResetBall : MonoBehaviour
         if (other.gameObject.name == "BallCheck")
         {
             //this.transform.position = new Vector3(20.8f, 0.27f, 4.87f);
-            this.transform.position = ballSpawn;
-            amountOfThrows = amountOfThrows + 1;
+           
+
+                this.transform.position = ballSpawn;
+                amountOfThrows = amountOfThrows + 1;
+           
+            
+
         }
 
         //prefabBall.transform.position = new Vector3(ballSpawn.position.y, ballSpawn.position.x, ballSpawn.position.z);
