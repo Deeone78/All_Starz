@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class UIManger : MonoBehaviour
@@ -13,11 +14,13 @@ public class UIManger : MonoBehaviour
     public static int player1Score = 0;
     public static int player2Score = 0;
     public static int totalPlayer1Score = 300;
+    public GameObject highlight1;
+    public GameObject highlight2;
     bool hasRun = false;
     ResetBall resetBall;
     FloorCode floorCode;
-    bool player1 = true;
-    bool player2 = false;
+    public static bool player1 = true;
+    public static bool player2 = false;
     void Awake()
     {
         instance = this;
@@ -71,7 +74,7 @@ public class UIManger : MonoBehaviour
         {
             
             AddPlayer1(score);
-
+            player2 = false;
             if (score!= 0)
             {
                 MinusScore(score);
@@ -88,7 +91,7 @@ public class UIManger : MonoBehaviour
 
             AddPlayer2(score);
 
-
+            player2= true;
             if (score != 0)
             {
                 MinusScore(score);
@@ -99,16 +102,20 @@ public class UIManger : MonoBehaviour
             //pinCheck.SetActive(true);
 
         }
-        else if (ResetBall.amountOfThrows == 0&& player1==false)
+        else if (ResetBall.amountOfThrows == 0&& player1==true&&player2==false)
         {
             Debug.Log("Player 1 turn");
-            player1 = true;
+            highlight1.SetActive(true);
+            highlight2.SetActive(false);
+            player1 = false;
         }
-        else if (ResetBall.amountOfThrows == 0 && player1 == true)
+        else if (ResetBall.amountOfThrows == 0 && player2 == true&&player1 == false)
         {
 
             Debug.Log("Player 2 turn");
-            player1 = false;
+            highlight2.SetActive(true);
+            highlight1.SetActive(false);
+            player1 = true;
 
         }
 
@@ -175,14 +182,14 @@ public class UIManger : MonoBehaviour
     }
     public void UpdateUI1(int player1Score)
     {
-        player1Text.text = "Player 1 Score " + player1Score;
+        player1Text.text = "Player 2 Score " + player1Score;
 
     }
 
     public void UpdateUI2(int player2Score)
     {
 
-        player2Text.text = "Player 2 Score " + player2Score;
+        player2Text.text = "Player 1 Score " + player2Score;
 
     }
 

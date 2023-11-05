@@ -25,7 +25,7 @@ public class ResetBall : MonoBehaviour
     void Update()
     {
         Debug.Log (amountOfThrows);
-        Debug.Log (MoveController.throwTime);
+       // Debug.Log (MoveController.throwTime);
        
       //  throwAmount = amountOfThrows;
     }
