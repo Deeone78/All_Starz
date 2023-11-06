@@ -45,7 +45,7 @@ Material:
     - _Step3: 0.97
     - _Step4: 0.025
     m_Colors:
-    - _BaseColor: {r: 0.56, g: 0.76236653, b: 1, a: 1}
+    - _BaseColor: {r: 0.8396226, g: 0.7268726, b: 0, a: 1}
     - _HighColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8018868, g: 0.69740456, b: 0.10969208, a: 1}

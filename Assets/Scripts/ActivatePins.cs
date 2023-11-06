@@ -24,9 +24,9 @@ public class ActivatePins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ResetBall.amountOfThrows == 2)
+        if (ResetBall.amountOfThrows == -1)
         {
-            Debug.Log("parent got there first");
+            
             pin.SetActive(true);
             pin1.SetActive(true);
             pin2.SetActive(true);
@@ -37,8 +37,8 @@ public class ActivatePins : MonoBehaviour
             pin7.SetActive(true);
             pin8.SetActive(true);
             pin9.SetActive(true);
-           
 
+          
         }
     }
 }
