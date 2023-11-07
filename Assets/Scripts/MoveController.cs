@@ -67,7 +67,7 @@ namespace TL.Core
                 readyTOBowl = false;
             }
 
-            if (ResetBall.amountOfThrows == 1&&readyTOBowl1 == true)
+            if (ResetBall.amountOfThrows == 1&&readyTOBowl1 == true&&distance<1f)
             {
                 Instantiate(npcBall, bowlBall.position, bowlBall.rotation);
 
