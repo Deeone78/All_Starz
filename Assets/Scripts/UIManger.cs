@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -59,24 +61,39 @@ public class UIManger : MonoBehaviour
     {
 
         player2Score += amount;
-        
+
         UIManger.instance.UpdateUI2(player2Score);
     }
-    
+
 
 
     void Update()
     {
-       // FloorCode.p1Score = player1Score;
-        
-       // Debug.Log(score);
-        
+        // FloorCode.p1Score = player1Score;
+
+        // Debug.Log(score);
+        /* switch (player1 && player2) 
+
+         { 
+           case (true&&false) :
+                 Debug.Log("Player 2 turn");
+                 highlight2.SetActive(true);
+                 highlight1.SetActive(false);
+                 player1 = true;
+                 hasRun = true;
+                 break;
+
+
+         }
+
+         */
+
         if (ResetBall.amountOfThrows == -1 && player1 == true)
         {
-            
+
             AddPlayer1(score);
             player2 = false;
-            if (score!= 0)
+            if (score != 0)
             {
                 MinusScore(score);
 
@@ -88,7 +105,7 @@ public class UIManger : MonoBehaviour
         if (ResetBall.amountOfThrows == 1)
         {
             hasRun = false;
-            
+
         }
 
 
@@ -109,23 +126,28 @@ public class UIManger : MonoBehaviour
             //pinCheck.SetActive(true);
 
         }
-        else if (ResetBall.amountOfThrows == 0 && player1 == true && player2 == false )
+        else if (ResetBall.amountOfThrows == 0 && player1 == true && player2 == false)
         {
-            Debug.Log("Player 1 turn");
-            highlight1.SetActive(true);
-            highlight2.SetActive(false);
-            player1 = false;
+            /* Debug.Log("Player 1 turn");
+             highlight1.SetActive(true);
+             highlight2.SetActive(false);
+             player1 = false;
+            
+            */
             hasRun = true;
+            StartCoroutine(Player1T());
+
         }
         else if (ResetBall.amountOfThrows == 0 && player2 == true && player1 == false)
         {
-
+            /*
             Debug.Log("Player 2 turn");
             highlight2.SetActive(true);
             highlight1.SetActive(false);
             player1 = true;
+            */
             hasRun = true;
-
+            StartCoroutine(Player2T());
         }
 
         if (score == 10 && ResetBall.amountOfThrows == 1 && player1 == false)
@@ -151,27 +173,28 @@ public class UIManger : MonoBehaviour
         }
         
         */
+        if (hasRun == true)
+        {
 
+
+            StopCoroutine(Player1T());
+
+            StopCoroutine(Player2T());
+
+        }
+        if (hasRun == false)
+        {
+
+
+        }
         if (ResetBall.amountOfThrows == -1)
         {
 
-            /*
-            if (player1 == true&&hasRun==false)
-            {
-               
-                
-                
 
 
-            }
-            if (player2 == true&& hasRun == false)
-            {
-               
-                
-            }
 
-            
-            */
+
+
 
 
         }
@@ -203,8 +226,25 @@ public class UIManger : MonoBehaviour
     }
 
 
+    IEnumerator Player1T()
+    {
+        hasRun = true;
+        yield return new WaitForSeconds(2);
+        Debug.Log("Player 1 turn");
+        highlight1.SetActive(true);
+        highlight2.SetActive(false);
+        player1 = false;
+
+    }
+    IEnumerator Player2T()
+    {
+        hasRun = true;
+        yield return new WaitForSeconds(2);
+        Debug.Log("Player 2 turn");
+        highlight2.SetActive(true);
+        highlight1.SetActive(false);
+        player1 = true;
 
 
-
-
+    }
 }

@@ -11,8 +11,8 @@ namespace TL.Core
         public Transform destination;
         public Transform destination1;
         public static bool throwTime = false;
-        bool readyTOBowl = true;
-        bool readyTOBowl1 = true;
+        bool readyTOBowl = false;
+        bool readyTOBowl1 = false;
         bool readyTOBowl2 = true;
         bool readyTOBowl3 = true;
         public Rigidbody npcBall;
@@ -42,7 +42,7 @@ namespace TL.Core
 
             Debug.Log(UIManger.player1);
             Debug.Log(UIManger.player2);
-           float movementValueX = Vector3.Distance(transform.position, lastPos) / Time.deltaTime;
+            float movementValueX = Vector3.Distance(transform.position, lastPos) / Time.deltaTime;
             lastPos = transform.position;
             anim.SetFloat("Speed",Mathf.Abs(movementValueX));
             anim.SetBool("IsBowling", isBowling);
