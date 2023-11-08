@@ -8,9 +8,11 @@ public class ShopManager : MonoBehaviour
 {
     public int currentShopIndex ;
    public GameObject[] Shop;
+    
 
    public ItemBlueprint[] item;
    public Button buyButton; 
+
 
     void Start()
     {
