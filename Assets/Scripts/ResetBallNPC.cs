@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using TL.Core;
 using UnityEngine;
 
@@ -24,7 +25,7 @@ public class ResetBallNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float power = Random.Range(-0.01f,- 1.1f);
+        float power = Random.Range(-0.01f,- 0.3f);
         float direction = Random.Range(-0.01f, 0.01f);
        
         /*
@@ -54,13 +55,14 @@ public class ResetBallNPC : MonoBehaviour
             //this.transform.position = new Vector3(20.8f, 0.27f, 4.87f);
 
 
-            
+            Debug.Log("does this run more than once");
             ResetBall.amountOfThrows = ResetBall.amountOfThrows + 1;
             Destroy(gameObject);  
 
 
         }
-
         
     }
+        
 }
+

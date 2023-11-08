@@ -16,6 +16,7 @@ public class UIManger : MonoBehaviour
     public static int totalPlayer1Score = 300;
     public GameObject highlight1;
     public GameObject highlight2;
+    bool hasRun1 = false;
     bool hasRun = false;
     ResetBall resetBall;
     FloorCode floorCode;
@@ -84,6 +85,12 @@ public class UIManger : MonoBehaviour
             //pinCheck.SetActive(true);
 
         }
+        if (ResetBall.amountOfThrows == 1)
+        {
+            hasRun = false;
+            
+        }
+
 
         else if (ResetBall.amountOfThrows == -1 && player1 == false)
         {
@@ -91,7 +98,7 @@ public class UIManger : MonoBehaviour
 
             AddPlayer2(score);
 
-            player2= true;
+            player2 = true;
             if (score != 0)
             {
                 MinusScore(score);
@@ -102,20 +109,22 @@ public class UIManger : MonoBehaviour
             //pinCheck.SetActive(true);
 
         }
-        else if (ResetBall.amountOfThrows == 0&& player1==true&&player2==false)
+        else if (ResetBall.amountOfThrows == 0 && player1 == true && player2 == false )
         {
             Debug.Log("Player 1 turn");
             highlight1.SetActive(true);
             highlight2.SetActive(false);
             player1 = false;
+            hasRun = true;
         }
-        else if (ResetBall.amountOfThrows == 0 && player2 == true&&player1 == false)
+        else if (ResetBall.amountOfThrows == 0 && player2 == true && player1 == false)
         {
 
             Debug.Log("Player 2 turn");
             highlight2.SetActive(true);
             highlight1.SetActive(false);
             player1 = true;
+            hasRun = true;
 
         }
 

@@ -35,8 +35,15 @@ public class FloorCode : MonoBehaviour
 
             }
         }
-        
-        
+        if (ResetBall.amountOfThrows == 2)
+        {
+            if (knockedOver == true)
+            {
+                pinCheck.SetActive(false);
+
+            }
+        }
+
         
         if (ResetBall.amountOfThrows == -1&& player1 ==true)
         {

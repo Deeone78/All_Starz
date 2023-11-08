@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PinRespawn : MonoBehaviour
 {
-  
+    FloorCode floorcode;
     ResetBall resetBall;
     public GameObject pinPos;
     FloorCode floorCode;
@@ -32,6 +32,9 @@ public class PinRespawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+        
         if (ResetBall.amountOfThrows == 1)
         {
            // this.transform.position = startPos;
@@ -40,7 +43,7 @@ public class PinRespawn : MonoBehaviour
 
         if (ResetBall.amountOfThrows == -1)
         {
-
+            StopCoroutine(PlusTwo());
             refreash = true;
             pinCheck1.transform.position = startPos;
             pinCheck1.transform.rotation = rStartPos;
@@ -66,7 +69,7 @@ public class PinRespawn : MonoBehaviour
 
 
             // pinCheck1.SetActive(true);
-            ResetBall.amountOfThrows = -1;
+            StartCoroutine(PlusTwo());
            // this.transform.position = startPos;
           // this.transform.rotation = rStartPos;
 
@@ -112,6 +115,13 @@ public class PinRespawn : MonoBehaviour
         ResetBall.amountOfThrows = 0;
 
         
+    }
+    IEnumerator PlusTwo()
+    {
+        yield return new WaitForSeconds(3);
+        //   Debug.Log("Smartest in the world");
+        ResetBall.amountOfThrows = -1;
+
     }
 
 }
