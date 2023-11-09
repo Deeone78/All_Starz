@@ -16,6 +16,16 @@ public class meny : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void Loadmenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void CharacterSelection()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
